@@ -1,203 +1,321 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="nl">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FK Innovations | Affordable Custom Websites</title>
+  <title>FK Innovations | Websites en Unity Apps op Maat</title>
   <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="Need a website? FK Innovations designs and builds fast, modern, affordable sites for small businesses, creators, and personal brands.">
+  <meta name="description" content="FK Innovations bouwt betaalbare websites en Unity (2D/3D/VR) apps voor kleine bedrijven, makers en persoonlijke merken. Vraag een vrijblijvende offerte aan.">
+  <meta name="keywords" content="website laten maken, unity ontwikkelaar, vr applicatie, 2d game, 3d game, webdesign, betaalbare website, FK Innovations">
 
-  <meta property="og:title" content="FK Innovations | Affordable Custom Websites">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="FK Innovations | Websites en Unity Apps op Maat">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fkinnovations.github.io/">
   <meta property="og:image" content="img/og-image.png">
-  <meta property="og:image:alt" content="Preview of a modern website layout by FK Innovations">
+  <meta property="og:image:alt" content="Voorbeeld van een moderne website en app layout door FK Innovations">
+  <meta property="og:description" content="FK Innovations bouwt betaalbare websites en Unity (2D/3D/VR) apps voor kleine bedrijven, makers en persoonlijke merken.">
 
+  <!-- Favicon and Icons -->
+  <link rel="canonical" href="https://fkinnovations.github.io/">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
 
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#0f172a">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "FK Innovations",
+      "url": "https://fkinnovations.github.io/",
+      "description": "FK Innovations ontwerpt en bouwt snelle, moderne, betaalbare websites en Unity (2D/3D/VR) applicaties.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "url": "https://fkinnovations.github.io/#contact"
+      },
+      "service": [
+        {
+          "@type": "Service",
+          "name": "Website Ontwikkeling",
+          "description": "Op maat gemaakte, moderne websites voor kleine bedrijven, makers en persoonlijke merken."
+        },
+        {
+          "@type": "Service",
+          "name": "Unity 2D App/Game Ontwikkeling",
+          "description": "2D projecten voor mobiel, desktop of web, van educatieve apps tot casual games."
+        },
+        {
+          "@type": "Service",
+          "name": "Unity 3D Project Ontwikkeling",
+          "description": "Immersieve 3D-ervaringen, simulaties en visualisaties voor verschillende platformen."
+        },
+        {
+          "@type": "Service",
+          "name": "Unity VR Experience Ontwikkeling",
+          "description": "Virtual reality applicaties voor training, entertainment of presentaties."
+        }
+      ]
+    }
+  </script>
 </head>
 
+<script src="js/app.js" defer></script>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo">FK<span>Innovations</span></div>
-      <nav class="main-nav">
-        <a href="#services">Services</a>
-        <a href="#process">How it works</a>
-        <a href="#work">Work</a>
-        <a href="#contact" class="btn btn-small">Get a site</a>
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">FK<span>Innovations</span></div>
+    <nav class="main-nav">
+      <a href="#services">Diensten</a>
+      <a href="#process">Hoe het werkt</a>
+      <a href="#work">Voorbeelden</a>
+      <a href="#unity">Unity Apps</a>
+      <a href="#contact" class="btn btn-small">Vraag een site aan</a>
+    </nav>
 
-  <main>
-    <section class="hero" id="top">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <h1>Need a website?<br>I'll build it for you.</h1>
-          <p class="hero-subtitle">Custom, modern websites for small businesses, creators, and personal brands  without the agency price tag.</p>
-          <div class="hero-cta">
-            <a href="#contact" class="btn btn-primary">Request your website</a>
-            <a href="#work" class="btn btn-ghost">See example layouts</a>
-          </div>
-          <ul class="hero-list">
-            <li>Responsive design (works on phone, tablet, and desktop)</li>
-            <li>Fast loading, clean code, and SEO-friendly structure</li>
-            <li>Simple pricing, no confusing tech talk</li>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Website nodig?<br>Ik bouw hem voor je.</h1>
+        <h2 class="hero-subtitle">Op maat gemaakte, moderne websites voor kleine bedrijven, makers en persoonlijke merken — zonder het prijskaartje van een bureau.</h2>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Vraag je website aan</a>
+          <a href="#work" class="btn btn-ghost">Bekijk voorbeeldlayouts</a>
+        </div>
+        <ul class="hero-list">
+          <li>Responsive design (werkt op telefoon, tablet en desktop)</li>
+          <li>Snel ladend, schone code en SEO-vriendelijke structuur</li>
+          <li>Simpele prijzen, geen verwarrende technische taal</li>
+        </ul>
+      </div>
+      <div class="hero-side">
+        <div class="hero-card">
+          <p class="hero-card-title">Vertel me wat je nodig hebt.</p>
+          <p class="hero-card-text">Je beschrijft je idee in gewone taal. Ik regel domein, layout en technische setup.</p>
+          <ul class="hero-card-steps">
+            <li><span>1.</span> Deel je doelen</li>
+            <li><span>2.</span> Keur het ontwerp goed</li>
+            <li><span>3.</span> Launch je nieuwe site</li>
           </ul>
         </div>
-        <div class="hero-side">
-          <div class="hero-card">
-            <p class="hero-card-title">Tell me what you need.</p>
-            <p class="hero-card-text">You describe your idea in plain language. I handle domain, layout, and technical setup.</p>
-            <ul class="hero-card-steps">
-              <li><span>1.</span> Share your goals</li>
-              <li><span>2.</span> Approve the design</li>
-              <li><span>3.</span> Launch your new site</li>
-            </ul>
-          </div>
-        </div>
       </div>
-    </section>
-
-    <section id="services" class="section section-light">
-      <div class="container">
-        <header class="section-header">
-          <h2>What I can build for you</h2>
-          <p>Pick the type of site that fits you best. All options include responsive design and basic on-page SEO.</p>
-        </header>
-        <div class="cards-grid">
-          <article class="card">
-            <h3>Simple Landing Page</h3>
-            <p>Perfect if you just need to be online quickly with your offer, contact details, and a clean design.</p>
-            <ul>
-              <li>1 long-scroll page</li>
-              <li>Contact form or call-to-action button</li>
-              <li>Basic analytics setup (optional)</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Small Business Site</h3>
-            <p>For local businesses that need a few pages: home, services, about, and contact.</p>
-            <ul>
-              <li>Up to 5 pages</li>
-              <li>Mobile-friendly layout</li>
-              <li>Clear navigation and calls to action</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Portfolio or Personal Brand</h3>
-            <p>Show your work, projects, or content with a layout tailored to your style and audience.</p>
-            <ul>
-              <li>Project / gallery section</li>
-              <li>About + contact pages</li>
-              <li>Easy to expand later</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="process" class="section">
-      <div class="container">
-        <header class="section-header">
-          <h2>How it works</h2>
-          <p>No jargon, no mystery. Just a clear 3-step process.</p>
-        </header>
-        <ol class="steps">
-          <li>
-            <h3>1. Tell me about your idea</h3>
-            <p>You fill out the short form below or send a quick message with what you need and any examples you like.</p>
-          </li>
-          <li>
-            <h3>2. I design & build your site</h3>
-            <p>I create a first version based on your content and style. You review and request changes.</p>
-          </li>
-          <li>
-            <h3>3. Launch & handover</h3>
-            <p>Once you're happy, we put your site live on your domain and I show you how to update the basics.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section id="work" class="section section-light">
-      <div class="container">
-        <header class="section-header">
-          <h2>Example layouts</h2>
-          <p>Here are example structures I can adapt to your brand and content.</p>
-        </header>
-        <div class="layouts-grid">
-          <div class="layout-box">
-            <h3>Clean business layout</h3>
-            <p>Hero, services, testimonials, contact.</p>
-          </div>
-          <div class="layout-box">
-            <h3>Creator / portfolio layout</h3>
-            <p>Gallery, featured projects, about, contact.</p>
-          </div>
-          <div class="layout-box">
-            <h3>Simple one-page layout</h3>
-            <p>Hero, about, offer, FAQs, contact.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section section-accent">
-      <div class="container contact-grid">
-        <div>
-          <header class="section-header section-header-invert">
-            <h2>Tell me about the website you want</h2>
-            <p>Share as much or as little detail as you like. Ill reply with ideas and a clear next step.</p>
-          </header>
-          <ul class="contact-notes">
-            <li>Describe your business or idea</li>
-            <li>Mention any sites you like the look of</li>
-            <li>Include your preferred way to contact you</li>
-          </ul>
-        </div>
-        <form class="contact-form" action="mailto:you@example.com" method="post" enctype="text/plain">
-          <label>
-            Name
-            <input type="text" name="name" required>
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" required>
-          </label>
-          <label>
-            What kind of website do you need?
-            <select name="type">
-              <option value="landing">Simple landing page</option>
-              <option value="business">Small business site</option>
-              <option value="portfolio">Portfolio / personal brand</option>
-              <option value="other">Something else</option>
-            </select>
-          </label>
-          <label>
-            Tell me about your idea
-            <textarea name="message" rows="5" placeholder="Write a few sentences about what you want your website to do."></textarea>
-          </label>
-          <button type="submit" class="btn btn-primary btn-block">Send request</button>
-          <p class="form-note">This form opens your default email app with your message. You can also contact me directly at <span>you@example.com</span>.</p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> FK Innovations. Need a website? <a href="#contact">Lets talk.</a></p>
     </div>
-  </footer>
+  </section>
 
-  <script src="js/app.js"></script>
+  <section id="services" class="section section-light">
+    <div class="container">
+      <header class="section-header">
+        <h2>Wat ik voor je kan bouwen</h2>
+        <p>Kies het type site dat het beste bij je past. Alle opties bevatten responsive design en basis on-page SEO.</p>
+      </header>
+      <div class="cards-grid">
+        <article class="card">
+          <h3>Simpele Landingspagina</h3>
+          <p>Perfect als je snel online wilt zijn met je aanbod, contactgegevens en een strak ontwerp.</p>
+          <ul>
+            <li>1 lange scrollpagina</li>
+            <li>Contactformulier of call-to-action knop</li>
+            <li>Basis analytics setup (optioneel)</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Kleine Bedrijfswebsite</h3>
+          <p>Voor lokale bedrijven die een paar pagina's nodig hebben: home, diensten, over ons en contact.</p>
+          <ul>
+            <li>Tot 5 pagina's</li>
+            <li>Mobiel-vriendelijke layout</li>
+            <li>Duidelijke navigatie en calls to action</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Portfolio of Persoonlijk Merk</h3>
+          <p>Toon je werk, projecten of content met een layout op maat van je stijl en publiek.</p>
+          <ul>
+            <li>Project / gallerij sectie</li>
+            <li>Over + contactpagina's</li>
+            <li>Gemakkelijk later uit te breiden</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="section">
+    <div class="container">
+      <header class="section-header">
+        <h2>Hoe het werkt</h2>
+        <p>Geen jargon, geen mysterie. Gewoon een duidelijk 3-stappen proces.</p>
+      </header>
+      <ol class="steps">
+        <li>
+          <h3>1. Vertel me over je idee</h3>
+          <p>Je vult het korte formulier hieronder in of stuurt een kort bericht met wat je nodig hebt en eventuele voorbeelden die je leuk vindt.</p>
+        </li>
+        <li>
+          <h3>2. Ik ontwerp & bouw je site</h3>
+          <p>Ik maak een eerste versie op basis van je content en stijl. Je bekijkt het en vraagt wijzigingen aan.</p>
+        </li>
+        <li>
+          <h3>3. Lancering & overdracht</h3>
+          <p>Als je tevreden bent, zetten we je site live op je domein en laat ik je zien hoe je de basics kunt updaten.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="work" class="section section-light">
+    <div class="container">
+      <header class="section-header">
+        <h2>Voorbeeldlayouts</h2>
+        <p>Hier zijn voorbeeldstructuren die ik kan aanpassen aan jouw merk en content.</p>
+      </header>
+      <div class="layouts-grid">
+        <a href="layouts/business.html" class="layout-box">
+          <img src="img/layout-business.jpg" alt="Voorbeeld van een strakke bedrijfslayout">
+          <h3>Strakke bedrijfslayout</h3>
+          <p>Hero, diensten, getuigenissen, contact.</p>
+        </a>
+        <a href="layouts/portfolio.html" class="layout-box">
+          <img src="img/layout-portfolio.jpg" alt="Voorbeeld van een portfolio layout voor een maker">
+          <h3>Maker / portfolio layout</h3>
+          <p>Galerij, uitgelichte projecten, over, contact.</p>
+        </a>
+        <a href="layouts/onepage.html" class="layout-box">
+          <img src="img/layout-onepage.jpg" alt="Voorbeeld van een simpele one-page layout">
+          <h3>Simpele one-page layout</h3>
+          <p>Hero, over, aanbod, veelgestelde vragen, contact.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="unity" class="section">
+    <div class="container">
+      <header class="section-header">
+        <h2>Unity Apps & Games</h2>
+        <p>Naast websites ontwikkel ik ook interactieve applicaties en games met Unity.</p>
+      </header>
+      <div class="cards-grid">
+        <article class="card">
+          <h3>2D Games & Apps</h3>
+          <p>Van educatieve apps tot casual games — 2D projecten voor mobiel, desktop of web.</p>
+          <ul>
+            <li>Mobiele games (iOS & Android)</li>
+            <li>Interactieve leerapplicaties</li>
+            <li>WebGL exports voor browsers</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>3D Projecten</h3>
+          <p>Immersieve 3D-ervaringen, simulaties en visualisaties voor verschillende platformen.</p>
+          <ul>
+            <li>Product visualisatie tools</li>
+            <li>Architectuur walkthroughs</li>
+            <li>3D games en simulaties</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>VR Experiences</h3>
+          <p>Virtual reality applicaties voor training, entertainment of presentaties.</p>
+          <ul>
+            <li>VR training modules</li>
+            <li>Immersieve presentaties</li>
+            <li>Virtual showrooms</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section id="faq" class="section section-light">
+    <div class="container">
+      <header class="section-header">
+        <h2>Veelgestelde Vragen</h2>
+      </header>
+      <div class="faq-list">
+        <article itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name">Hoeveel kost een website of Unity app?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">De kosten variëren afhankelijk van de complexiteit en functionaliteit. Neem contact op voor een vrijblijvende offerte op maat.</p>
+          </div>
+        </article>
+        <article itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name">Hoe lang duurt het om een project op te leveren?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">Een simpele landingspagina kan binnen 1-2 weken klaar zijn. Grotere websites of Unity projecten nemen 4-8 weken in beslag, afhankelijk van de scope.</p>
+          </div>
+        </article>
+        <article itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name">Kan ik zelf updates doen aan mijn website?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">Ja, ik zorg voor een gebruiksvriendelijke oplossing en geef je uitleg over hoe je eenvoudige updates kunt doorvoeren.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-accent">
+    <div class="container contact-grid">
+      <div>
+        <header class="section-header section-header-invert">
+          <h2>Heb je een project in gedachten?</h2>
+          <p>Deel zoveel of zo weinig details als je wilt. Ik reageer met ideeën en een duidelijke volgende stap.</p>
+        </header>
+        <ul class="contact-notes">
+          <li>Beschrijf je bedrijf of idee</li>
+          <li>Noem eventuele sites of apps waarvan je het uiterlijk leuk vindt</li>
+          <li>Vermeld je voorkeursmanier om contact op te nemen</li>
+        </ul>
+      </div>
+      <form class="contact-form" action="https://formsubmit.co/your-email@example.com" method="POST">
+        <!-- FormSubmit configuration -->
+        <input type="hidden" name="_subject" value="Nieuwe projectaanvraag">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <label for="name">Naam</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="type">Wat voor project heb je nodig?</label>
+        <select id="type" name="type">
+          <option value="landing">Simpele landingspagina</option>
+          <option value="business">Kleine bedrijfswebsite</option>
+          <option value="portfolio">Portfolio / persoonlijk merk</option>
+          <option value="unity2d">Unity 2D App/Game</option>
+          <option value="unity3d">Unity 3D Project</option>
+          <option value="unityvr">Unity VR Experience</option>
+          <option value="other">Iets anders</option>
+        </select>
+
+        <label for="message">Vertel me over je idee</label>
+        <textarea id="message" name="message" rows="5" placeholder="Schrijf een paar zinnen over wat je wilt dat je project doet."></textarea>
+
+        <button type="submit" class="btn btn-primary btn-block">Verzend aanvraag</button>
+        <p class="form-note">Na verzending word je doorgestuurd naar een bevestigingspagina.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> FK Innovations. Website nodig? <a href="#contact">Laten we praten.</a></p>
+  </div>
+</footer>
+
 </body>
 
 </html>

@@ -1,0 +1,39 @@
+/* Styles for demo layout pages */
+.demo-badge {
+  background: #f59e0b;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.demo-badge a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Testimonials section specific to layouts */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.testimonial-quote {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #64748b;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: #0f172a;
+}

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mijn Portfolio | [Jouw Naam]</title>
+  <style>
+    /* --- DEZE STIJL IS GEBASEERD OP JOUW STYLE.CSS --- */
+    :root {
+      --bg: #020617;
+      --bg-light: #0f172a;
+      --accent: #38bdf8;
+      --text: #e2e8f0;
+      --text-soft: #94a3b8;
+      --card-bg: #1e293b;
+      --radius: 12px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; transition: 0.2s; }
+    ul { list-style: none; }
+
+    /* --- DEMO BADGE (Nieuw) --- */
+    .demo-badge {
+      background: #f59e0b; /* Oranje kleur */
+      color: white;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .demo-badge a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    /* --- NAVIGATIE --- */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(2, 6, 23, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+      padding: 1rem 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    .logo span { color: var(--accent); }
+
+    /* Aangepast naar .main-nav voor app.js compatibiliteit */
+    .main-nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .main-nav a {
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      position: relative;
+    }
+
+    .main-nav a:hover { color: var(--accent); }
+
+    /* Deze klasse wordt door app.js toegevoegd als je scrollt */
+    .main-nav a.active {
+      color: var(--accent);
+      font-weight: bold;
+    }
+    .main-nav a.active::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      background-color: var(--accent);
+    }
+
+    /* --- KNOPPEN --- */
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      border-radius: 99px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background-color: var(--accent);
+      color: #0f172a;
+    }
+    .btn-primary:hover { background-color: #7dd3fc; }
+
+    .btn-outline {
+      border: 1px solid var(--text-soft);
+      color: var(--text);
+      margin-left: 10px;
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* --- HERO SECTIE --- */
+    .hero {
+      padding: 8rem 0 5rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-soft);
+      margin-bottom: 2rem;
+    }
+
+    /* --- SECTIES ALGEMEEN --- */
+    section { padding: 5rem 0; }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: #fff;
+    }
+
+    /* --- PROJECTEN GRID --- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover { transform: translateY(-5px); }
+
+    .card-img {
+      height: 200px;
+      background-color: #334155;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.2);
+    }
+
+    .card-content { padding: 1.5rem; }
+
+    .card-tags {
+      font-size: 0.75rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .card h3 { margin-bottom: 0.5rem; color: #fff; }
+    .card p { color: var(--text-soft); font-size: 0.9rem; }
+    .card-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #fff;
+      font-weight: 600;
+      border-bottom: 1px solid var(--accent);
+    }
+
+    /* --- OVER MIJ --- */
+    .bg-light { background-color: var(--bg-light); }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .about-img {
+      width: 100%;
+      height: 300px;
+      background-color: #334155;
+      border-radius: var(--radius);
+    }
+
+    /* --- CONTACT --- */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: rgba(15, 23, 42, 0.5);
+      padding: 2rem;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background-color: #020617;
+      border: 1px solid #334155;
+      color: #fff;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-soft);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .about-content { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="demo-badge">
+  📋 Dit is een voorbeeldlayout — <a href="../index.html">Terug naar home</a>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <div class="logo">[Jouw]<span>Portfolio</span></div>
+
+    <nav class="main-nav">
+      <a href="#hero">Home</a>
+      <a href="#werk">Werk</a>
+      <a href="#over">Over</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<section id="hero" class="hero">
+  <div class="container" style="display:block;">
+    <h1>Ontwerper. Bouwer.<br>Creatieve Denker.</h1>
+    <p>Ik ben [Jouw Naam], een digitale creator gespecialiseerd in websites en interactieve ervaringen.</p>
+    <div>
+      <a href="#werk" class="btn btn-primary">Bekijk mijn werk</a>
+      <a href="#contact" class="btn btn-outline">Neem contact op</a>
+    </div>
+  </div>
+</section>
+
+<section id="werk">
+  <div class="container" style="display:block;">
+    <h2 class="section-title">Uitgelichte Projecten</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="card-img">Afbeelding Project</div>
+        <div class="card-content">
+          <span class="card-tags">Web Development</span>
+          <h3>Bedrijfswebsite Pro</h3>
+          <p>Een complete responsive website gebouwd voor een lokale klant.</p>
+          <a href="#" class="card-link">Bekijk Case Study</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img">Afbeelding Project</div>
+        <div class="card-content">
+          <span class="card-tags">Unity / 3D</span>
+          <h3>Virtual Reality Tour</h3>
+          <p>Een interactieve VR-ervaring gemaakt in Unity.</p>
+          <a href="#" class="card-link">Bekijk Demo</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="over" class="bg-light">
+  <div class="container" style="display:block;">
+    <h2 class="section-title">Wie ben ik?</h2>
+    <div class="about-content">
+      <div class="about-img"></div>
+      <div class="about-text">
+        <h3 style="color:#fff; margin-bottom:1rem;">Gepassioneerd over code</h3>
+        <p style="color:var(--text-soft);">
+          Hier kun je jouw verhaal vertellen.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container" style="display:block;">
+    <h2 class="section-title">Contact</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Naam" required>
+      <input type="email" placeholder="Email" required>
+      <textarea rows="5" placeholder="Bericht..." required></textarea>
+      <button type="submit" class="btn btn-primary" style="width:100%; border:none;">Verstuur</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 [Jouw Naam].</p>
+</footer>
+
+<script src="../js/app.js"></script>
+
+</body>
+</html>
