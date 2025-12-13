@@ -601,3 +601,76 @@ body {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+#changing-text {
+  transition: opacity 0.3s ease-in-out;
+}
+
+#changing-text.fade-out {
+  opacity: 0;
+}
+/* --- VERBETERDE CONTACT FORMULIER STIJL --- */
+
+/* De container van het formulier */
+.contact-form {
+  background: rgba(30, 41, 59, 0.7); /* Iets lichter dan de achtergrond */
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; /* Ruimte tussen de blokken */
+}
+
+/* De labels (Tekst boven de velden) */
+.contact-form label {
+  font-weight: 600;
+  color: #cbd5e1; /* Lichte grijs */
+  font-size: 0.95rem;
+  margin-bottom: -0.5rem; /* Trekt ze iets dichter naar het veld */
+  display: block;
+}
+
+/* De invulvelden (Input en Textarea) */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  background-color: #0f172a; /* Heel donker blauw/zwart */
+  border: 1px solid #334155; /* Subtiele rand */
+  color: #fff;
+  padding: 12px 16px; /* Meer ruimte binnenin */
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+/* Wanneer je in een veld klikt */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #38bdf8; /* Je accent blauw */
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15); /* Blauwe gloed */
+  background-color: #1e293b;
+}
+
+/* De Selectbox (Dropdown) styling */
+.contact-form select {
+  cursor: pointer;
+  appearance: none; /* Verwijdert standaard pijltje (optioneel) */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23cbd5e1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
+
+/* De Knop */
+.contact-form button {
+  margin-top: 10px;
+  padding: 14px;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
