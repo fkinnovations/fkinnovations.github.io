@@ -34,6 +34,31 @@
   <meta name="theme-color" content="#0f172a">
 
   <style>
+    /* --- Navigatie Icoontje (Specifiek voor het menu) --- */
+    .nav-item-icon {
+      display: flex !important;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .main-nav .nav-icon {
+      height: 18px; /* Forceer een kleinere, vaste hoogte */
+      width: auto;  /* Behoud de verhoudingen */
+      /* DE MAGIE: Maak het zwarte icoon WIT */
+      filter: invert(1) brightness(100%);
+      opacity: 0.9; /* Ietsje zachter wit zodat het past bij de tekst */
+    }
+
+    /* --- Universeel Tekst Icoontje (Voor in H1, H2 etc.) --- */
+    .text-icon {
+      height: 1em; /* Schaalt mee met de tekstgrootte */
+      width: auto;
+      vertical-align: -0.15em;
+      margin-right: 0.3em;
+      margin-left: 0.1em;
+      /* OOK HIER: Maak het icoon WIT */
+      filter: invert(1) brightness(100%);
+    }
     /* Basis instellingen */
     :root { --bg: #020617; --accent: #38bdf8; --text: #0f172a; --white: #ffffff; }
     body { margin: 0; font-family: system-ui, -apple-system, sans-serif; color: #0f172a; background-color: #050505; overflow-x: hidden; }
