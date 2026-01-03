@@ -3,268 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preload" href="../css/style.css" as="style">
+  <link rel="preload" href="../css/layouts.css" as="style">
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z5BP3P4YHP"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-Z5BP3P4YHP');
   </script>
+
   <title>Mijn Portfolio | [Jouw Naam]</title>
+
   <style>
-    /* --- DEZE STIJL IS GEBASEERD OP JOUW STYLE.CSS --- */
+    /* Basis Variabelen & Reset */
     :root {
-      --bg: #020617;
-      --bg-light: #0f172a;
-      --accent: #38bdf8;
-      --text: #e2e8f0;
-      --text-soft: #94a3b8;
-      --card-bg: #1e293b;
-      --radius: 12px;
+      --bg: #020617; --accent: #38bdf8; --text: #e2e8f0; --text-soft: #94a3b8;
+      --card-bg: #1e293b; --radius: 12px; --white: #ffffff;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
+    body { font-family: system-ui, -apple-system, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
     a { text-decoration: none; transition: 0.2s; }
     ul { list-style: none; }
 
-    /* --- DEMO BADGE (Nieuw) --- */
-    .demo-badge {
-      background: #f59e0b; /* Oranje kleur */
-      color: white;
-      padding: 0.5rem 1rem;
-      text-align: center;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
+    /* Demo Badge (Critical want staat bovenaan) */
+    .demo-badge { background: #f59e0b; color: white; padding: 0.5rem 1rem; text-align: center; font-weight: 600; font-size: 0.9rem; }
+    .demo-badge a { color: white; text-decoration: underline; }
 
-    .demo-badge a {
-      color: white;
-      text-decoration: underline;
-    }
-
-    /* --- NAVIGATIE --- */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(2, 6, 23, 0.85);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.1);
-      padding: 1rem 0;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: #fff;
-      text-transform: uppercase;
-    }
+    /* Header & Navigatie */
+    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(148, 163, 184, 0.1); padding: 1rem 0; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: 700; font-size: 1.2rem; color: #fff; text-transform: uppercase; }
     .logo span { color: var(--accent); }
+    .main-nav { display: flex; gap: 20px; }
+    .main-nav a { color: var(--text-soft); font-size: 0.95rem; position: relative; }
+    .main-nav a:hover, .main-nav a.active { color: var(--accent); }
 
-    /* Aangepast naar .main-nav voor app.js compatibiliteit */
-    .main-nav {
-      display: flex;
-      gap: 20px;
-    }
+    /* Hero Sectie */
+    .hero { padding: 8rem 0 5rem; text-align: center; max-width: 800px; margin: 0 auto; }
+    .hero h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 1rem; color: #fff; }
+    .hero p { font-size: 1.2rem; color: var(--text-soft); margin-bottom: 2rem; }
 
-    .main-nav a {
-      color: var(--text-soft);
-      font-size: 0.95rem;
-      position: relative;
-    }
+    /* Knoppen (Nodig voor Hero) */
+    .btn { display: inline-block; padding: 0.6rem 1.2rem; border-radius: 99px; font-weight: 600; cursor: pointer; }
+    .btn-primary { background-color: var(--accent); color: #0f172a; }
+    .btn-outline { border: 1px solid var(--text-soft); color: var(--text); margin-left: 10px; }
 
-    .main-nav a:hover { color: var(--accent); }
-
-    /* Deze klasse wordt door app.js toegevoegd als je scrollt */
-    .main-nav a.active {
-      color: var(--accent);
-      font-weight: bold;
-    }
-    .main-nav a.active::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: 100%;
-      height: 2px;
-      background-color: var(--accent);
-    }
-
-    /* --- KNOPPEN --- */
-    .btn {
-      display: inline-block;
-      padding: 0.6rem 1.2rem;
-      border-radius: 99px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .btn-primary {
-      background-color: var(--accent);
-      color: #0f172a;
-    }
-    .btn-primary:hover { background-color: #7dd3fc; }
-
-    .btn-outline {
-      border: 1px solid var(--text-soft);
-      color: var(--text);
-      margin-left: 10px;
-    }
-    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
-
-    /* --- HERO SECTIE --- */
-    .hero {
-      padding: 8rem 0 5rem;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      line-height: 1.1;
-      margin-bottom: 1rem;
-      color: #fff;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--text-soft);
-      margin-bottom: 2rem;
-    }
-
-    /* --- SECTIES ALGEMEEN --- */
-    section { padding: 5rem 0; }
-
-    .section-title {
-      font-size: 2rem;
-      margin-bottom: 3rem;
-      text-align: center;
-      color: #fff;
-    }
-
-    /* --- PROJECTEN GRID --- */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .card {
-      background-color: var(--card-bg);
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.05);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover { transform: translateY(-5px); }
-
-    .card-img {
-      height: 200px;
-      background-color: #334155;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(255,255,255,0.2);
-    }
-
-    .card-content { padding: 1.5rem; }
-
-    .card-tags {
-      font-size: 0.75rem;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-
-    .card h3 { margin-bottom: 0.5rem; color: #fff; }
-    .card p { color: var(--text-soft); font-size: 0.9rem; }
-    .card-link {
-      display: inline-block;
-      margin-top: 1rem;
-      color: #fff;
-      font-weight: 600;
-      border-bottom: 1px solid var(--accent);
-    }
-
-    /* --- OVER MIJ --- */
-    .bg-light { background-color: var(--bg-light); }
-
-    .about-content {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    .about-img {
-      width: 100%;
-      height: 300px;
-      background-color: #334155;
-      border-radius: var(--radius);
-    }
-
-    /* --- CONTACT --- */
-    .contact-form {
-      max-width: 600px;
-      margin: 0 auto;
-      background: rgba(15, 23, 42, 0.5);
-      padding: 2rem;
-      border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,0.05);
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      background-color: #020617;
-      border: 1px solid #334155;
-      color: #fff;
-      border-radius: 6px;
-      font-family: inherit;
-    }
-
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: var(--accent);
-    }
-
-    /* --- FOOTER --- */
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: var(--text-soft);
-      border-top: 1px solid rgba(255,255,255,0.05);
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 768px) {
-      .about-content { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2.2rem; }
-    }
+    /* Mobiele aanpassing voor Hero font */
+    @media (max-width: 768px) { .hero h1 { font-size: 2.2rem; } }
   </style>
+
+  <link rel="stylesheet" href="../css/style.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="../css/layouts.css" media="print" onload="this.media='all'">
+
+  <noscript>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/layouts.css">
+  </noscript>
 </head>
+
 <body>
 
 <div class="demo-badge">
@@ -274,14 +73,12 @@
 <header class="site-header">
   <div class="container">
     <div class="logo">[Jouw]<span>Portfolio</span></div>
-
     <nav class="main-nav">
       <a href="#hero">Home</a>
       <a href="#werk">Werk</a>
       <a href="#over">Over</a>
       <a href="#contact">Contact</a>
     </nav>
-
   </div>
 </header>
 
