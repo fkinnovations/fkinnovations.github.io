@@ -149,10 +149,13 @@ body {
 /* --- SECTIES --- */
 .section { padding: 3.5rem 0; background: var(--white); color: var(--text); }
 .section-light { background: var(--bg-light); }
+.section-dark { background: var(--bg); color: var(--white); }
 .section-accent { background: radial-gradient(circle at top left, #0ea5e9, #0b1120 52%); color: var(--white); }
 .section-header { text-align: left; margin-bottom: 2rem; }
 .section-header h2 { font-size: 1.7rem; margin-bottom: 0.4rem; color: var(--text); }
+.section-dark .section-header h2 { color: var(--white); }
 .section-header p { margin: 0; color: var(--text-soft); }
+.section-dark .section-header p { color: #94a3b8; }
 .section-header-invert p { color: #cbd5f5; }
 
 /* --- KAARTEN (Standaard wit) --- */
@@ -183,6 +186,8 @@ body {
 .card-unity p, .card-unity ul { color: #94a3b8; /* Lichtere grijsblauwe tekst */ }
 .card-unity:hover { border-color: var(--accent); }
 
+.section-dark .steps h3 { color: var(--white); }
+.section-dark .steps p { color: #cbd5e1; }
 
 /* --- LAYOUT BOXES (Portfolio) --- */
 .layout-box {
@@ -252,6 +257,15 @@ body {
 
 /* --- HELPER CLASSES --- */
 .hidden, [hidden] { display: none !important; }
+
+#lang-toggle {
+  min-width: 40px;
+  padding: 0.35rem 0.5rem;
+  font-family: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .visually-hidden { border: 0; clip: rect(0, 0, 0, 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; white-space: nowrap; width: 1px; }
 .clearfix::before, .clearfix::after { content: ""; display: table; }
 .clearfix::after { clear: both; }

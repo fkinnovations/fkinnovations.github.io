@@ -121,13 +121,14 @@
   <div class="container header-inner">
     <div class="logo">FK<span>Innovations</span></div>
     <nav class="main-nav">
-      <a href="#services">Diensten</a>
-      <a href="#process">Werkwijze</a>
-      <a href="#work">Portfolio</a>
-      <a href="#unity" class="nav-item-icon">
+      <a href="#services" data-i18n="nav.services">Diensten</a>
+      <a href="#process" data-i18n="nav.process">Werkwijze</a>
+      <a href="#work" data-i18n="nav.portfolio">Portfolio</a>
+      <a href="#unity" class="nav-item-icon" data-i18n="nav.unity">
         <img src="img/unity3d-icon.svg" alt="Unity Logo" class="nav-icon"> Unity
       </a>
-      <a href="#contact" class="btn btn-small">Offerte aanvragen</a>
+      <a href="#contact" class="btn btn-small" data-i18n="nav.contact">Offerte aanvragen</a>
+      <button id="lang-toggle" class="btn btn-ghost btn-small" aria-label="Switch Language">EN</button>
     </nav>
   </div>
 </header>
@@ -136,16 +137,21 @@
   <section class="hero" id="top">
     <div class="container hero-inner">
       <div class="hero-copy">
-        <h1>Websites & <img src="img/unity3d-icon.svg" class="text-icon" alt=""> Unity Apps<br>laten maken?</h1>
-        <h2 class="hero-subtitle">Ik ben jouw freelance partner voor maatwerk websites en interactieve 3D ervaringen. Moderne technologie zonder de bureau-prijzen.</h2>
+        <h1>
+          <span data-i18n="hero.title.websites">Websites &</span>
+          <img src="img/unity3d-icon.svg" class="text-icon" alt="">
+          <span data-i18n="hero.title.unity">Unity Apps</span><br>
+          <span data-i18n="hero.title.create">laten maken?</span>
+        </h1>
+        <h2 class="hero-subtitle" data-i18n="hero.subtitle">Ik ben jouw freelance partner voor maatwerk websites en interactieve 3D ervaringen. Moderne technologie zonder de bureau-prijzen.</h2>
         <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary">Start je project</a>
-          <a href="#work" class="btn btn-ghost">Bekijk mijn werk</a>
+          <a href="#contact" class="btn btn-primary" data-i18n="hero.cta.start">Start je project</a>
+          <a href="#work" class="btn btn-ghost" data-i18n="hero.cta.work">Bekijk mijn werk</a>
         </div>
         <ul class="hero-list">
-          <li>100% Responsive & SEO-geoptimaliseerd</li>
-          <li>Expert in Webdesign én Game Development</li>
-          <li>Direct contact met de ontwikkelaar</li>
+          <li data-i18n="hero.list.1">100% Responsive & SEO-geoptimaliseerd</li>
+          <li data-i18n="hero.list.2">Expert in Webdesign én Game Development</li>
+          <li data-i18n="hero.list.3">Direct contact met de ontwikkelaar</li>
         </ul>
       </div>
       <div class="hero-side">
@@ -154,7 +160,7 @@
             <span class="prompt">&gt;</span> Start_Project.exe
           </p>
 
-          <p class="hero-card-text">
+          <p class="hero-card-text" data-i18n="hero.terminal.text">
             Geen zwart gat waar je idee in verdwijnt. Transparante code, heldere logica en een resultaat dat werkt.
           </p>
 
@@ -171,65 +177,65 @@
   <section id="services" class="section section-light">
     <div class="container">
       <header class="section-header">
-        <h2>Waarmee kan ik je helpen?</h2>
-        <p>Digitale oplossingen die jouw bedrijf of idee laten groeien.</p>
+        <h2 data-i18n="services.title">Waarmee kan ik je helpen?</h2>
+        <p data-i18n="services.subtitle">Digitale oplossingen die jouw bedrijf of idee laten groeien.</p>
       </header>
       <div class="cards-grid">
         <article class="card">
-          <h3>Online Zichtbaarheid</h3>
-          <p>Wil je een product lanceren of leads verzamelen? Ik bouw snelle landingspagina's die bezoekers omzetten in klanten.</p>
+          <h3 data-i18n="services.card1.title">Online Zichtbaarheid</h3>
+          <p data-i18n="services.card1.text">Wil je een product lanceren of leads verzamelen? Ik bouw snelle landingspagina's die bezoekers omzetten in klanten.</p>
           <ul>
-            <li>Hoge conversie focus</li>
-            <li>Google Analytics integratie</li>
-            <li>Razendsnelle laadtijden</li>
+            <li data-i18n="services.card1.list1">Hoge conversie focus</li>
+            <li data-i18n="services.card1.list2">Google Analytics integratie</li>
+            <li data-i18n="services.card1.list3">Razendsnelle laadtijden</li>
           </ul>
         </article>
         <article class="card">
-        <h3>Web & E-commerce</h3> <p>Van snelle landingspagina's tot complete webshops. Ik bouw nieuw of help je met bestaande systemen.</p>
+        <h3 data-i18n="services.card2.title">Web & E-commerce</h3> <p data-i18n="services.card2.text">Van snelle landingspagina's tot complete webshops. Ik bouw nieuw of help je met bestaande systemen.</p>
         <ul>
-          <li>Maatwerk Websites</li>
-          <li>Shopify & WordPress setup</li> <li>Reparatie van bestaande code</li> </ul>
+          <li data-i18n="services.card2.list1">Maatwerk Websites</li>
+          <li data-i18n="services.card2.list2">Shopify & WordPress setup</li> <li data-i18n="services.card2.list3">Reparatie van bestaande code</li> </ul>
       </article>
         <article class="card">
-          <h3>Professionele Identiteit</h3>
-          <p>Een complete bedrijfswebsite die vertrouwen uitstraalt. Ideaal voor het MKB en freelancers die een stap verder willen.</p>
+          <h3 data-i18n="services.card3.title">Professionele Identiteit</h3>
+          <p data-i18n="services.card3.text">Een complete bedrijfswebsite die vertrouwen uitstraalt. Ideaal voor het MKB en freelancers die een stap verder willen.</p>
           <ul>
-            <li>Vindbaar in Google (SEO)</li>
-            <li>Makkelijk uitbreidbaar</li>
-            <li>Inclusief hosting advies</li>
+            <li data-i18n="services.card3.list1">Vindbaar in Google (SEO)</li>
+            <li data-i18n="services.card3.list2">Makkelijk uitbreidbaar</li>
+            <li data-i18n="services.card3.list3">Inclusief hosting advies</li>
           </ul>
         </article>
         <article class="card">
-          <h3>Interactieve Ervaringen</h3>
-          <p>Wil je écht opvallen? Kies voor een interactief portfolio of een 3D-beleving op het web waar je concurrenten jaloers op zijn.</p>
+          <h3 data-i18n="services.card4.title">Interactieve Ervaringen</h3>
+          <p data-i18n="services.card4.text">Wil je écht opvallen? Kies voor een interactief portfolio of een 3D-beleving op het web waar je concurrenten jaloers op zijn.</p>
           <ul>
-            <li>Unieke animaties</li>
-            <li>Portfolio gallerijen</li>
-            <li>Verhaalgerichte layouts</li>
+            <li data-i18n="services.card4.list1">Unieke animaties</li>
+            <li data-i18n="services.card4.list2">Portfolio gallerijen</li>
+            <li data-i18n="services.card4.list3">Verhaalgerichte layouts</li>
           </ul>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="process" class="section">
+  <section id="process" class="section section-dark">
     <div class="container">
       <header class="section-header">
-        <h2>Zo werken we samen</h2>
-        <p>Transparant, persoonlijk en zonder technisch jargon.</p>
+        <h2 data-i18n="process.title">Zo werken we samen</h2>
+        <p data-i18n="process.subtitle">Transparant, persoonlijk en zonder technisch jargon.</p>
       </header>
       <ol class="steps">
         <li>
-          <h3>1. Het Gesprek</h3>
-          <p>Jij vertelt wat je nodig hebt. Ik luister, stel vragen en denk mee over de haalbaarheid en de beste technische aanpak.</p>
+          <h3 data-i18n="process.step1.title">1. Het Gesprek</h3>
+          <p data-i18n="process.step1.text">Jij vertelt wat je nodig hebt. Ik luister, stel vragen en denk mee over de haalbaarheid en de beste technische aanpak.</p>
         </li>
         <li>
-          <h3>2. De Bouwfase</h3>
-          <p>Ik ga aan de slag met het ontwerp en de code. Je krijgt tussentijds updates zodat je precies ziet hoe je project tot leven komt.</p>
+          <h3 data-i18n="process.step2.title">2. De Bouwfase</h3>
+          <p data-i18n="process.step2.text">Ik ga aan de slag met het ontwerp en de code. Je krijgt tussentijds updates zodat je precies ziet hoe je project tot leven komt.</p>
         </li>
         <li>
-          <h3>3. Oplevering & Support</h3>
-          <p>We zetten alles live. Ik leg je uit hoe alles werkt en blijf beschikbaar voor vragen of toekomstige uitbreidingen.</p>
+          <h3 data-i18n="process.step3.title">3. Oplevering & Support</h3>
+          <p data-i18n="process.step3.text">We zetten alles live. Ik leg je uit hoe alles werkt en blijf beschikbaar voor vragen of toekomstige uitbreidingen.</p>
         </li>
       </ol>
     </div>
@@ -238,58 +244,58 @@
   <section id="work" class="section section-light">
     <div class="container">
       <header class="section-header">
-        <h2>Kies je stijl</h2>
-        <p>Bekijk deze voorbeeldstructuren. Elk design wordt volledig aangepast aan jouw huisstijl.</p>
+        <h2 data-i18n="work.title">Kies je stijl</h2>
+        <p data-i18n="work.subtitle">Bekijk deze voorbeeldstructuren. Elk design wordt volledig aangepast aan jouw huisstijl.</p>
       </header>
       <div class="layouts-grid">
         <a href="layouts/business.html" class="layout-box">
-          <h3>De 'Corporate' Look</h3>
-          <p>Betrouwbaar, strak en overzichtelijk. Perfect voor diensten.</p>
+          <h3 data-i18n="work.business.title">De 'Corporate' Look</h3>
+          <p data-i18n="work.business.text">Betrouwbaar, strak en overzichtelijk. Perfect voor diensten.</p>
         </a>
         <a href="layouts/portfolio.html" class="layout-box">
-          <h3>De 'Creative' Look</h3>
-          <p>Visueel ingesteld met veel ruimte voor afbeeldingen en werk.</p>
+          <h3 data-i18n="work.creative.title">De 'Creative' Look</h3>
+          <p data-i18n="work.creative.text">Visueel ingesteld met veel ruimte voor afbeeldingen en werk.</p>
         </a>
         <a href="layouts/onepage.html" class="layout-box">
-          <h3>De 'Minimalist' Look</h3>
-          <p>Alles op één pagina. Modern, snel en to-the-point.</p>
+          <h3 data-i18n="work.minimalist.title">De 'Minimalist' Look</h3>
+          <p data-i18n="work.minimalist.text">Alles op één pagina. Modern, snel en to-the-point.</p>
         </a>
       </div>
     </div>
   </section>
 
-  <section id="unity" class="section">
+  <section id="unity" class="section section-dark">
     <div class="container">
       <header class="section-header">
-      <h2><img src="img/unity3d-icon.svg" class="text-icon" alt=""> Unity Development</h2>
-      <p>Als ervaren Unity ontwikkelaar bouw ik meer dan alleen websites.</p>
+      <h2><img src="img/unity3d-icon.svg" class="text-icon" alt=""><span data-i18n="unity.title"> Unity Development</span></h2>
+      <p data-i18n="unity.subtitle">Als ervaren Unity ontwikkelaar bouw ik meer dan alleen websites.</p>
     </header>
       <div class="cards-grid">
         <article class="card card-unity">
-          <h3>Serious Games & Apps</h3>
-          <p>Educatieve applicaties of gamified marketing tools die werken op zowel mobiel (iOS/Android) als desktop.</p>
+          <h3 data-i18n="unity.card1.title">Serious Games & Apps</h3>
+          <p data-i18n="unity.card1.text">Educatieve applicaties of gamified marketing tools die werken op zowel mobiel (iOS/Android) als desktop.</p>
           <ul>
-            <li>Cross-platform development</li>
-            <li>Touch controls & UI</li>
-            <li>App Store begeleiding</li>
+            <li data-i18n="unity.card1.list1">Cross-platform development</li>
+            <li data-i18n="unity.card1.list2">Touch controls & UI</li>
+            <li data-i18n="unity.card1.list3">App Store begeleiding</li>
           </ul>
         </article>
         <article class="card card-unity">
-          <h3>3D Visualisaties</h3>
-          <p>Interactieve productdemo's of vastgoed walkthroughs. Laat klanten je product ervaren voordat ze kopen.</p>
+          <h3 data-i18n="unity.card2.title">3D Visualisaties</h3>
+          <p data-i18n="unity.card2.text">Interactieve productdemo's of vastgoed walkthroughs. Laat klanten je product ervaren voordat ze kopen.</p>
           <ul>
-            <li>High-end graphics</li>
-            <li>Real-time rendering</li>
-            <li>WebGL (draait in browser)</li>
+            <li data-i18n="unity.card2.list1">High-end graphics</li>
+            <li data-i18n="unity.card2.list2">Real-time rendering</li>
+            <li data-i18n="unity.card2.list3">WebGL (draait in browser)</li>
           </ul>
         </article>
         <article class="card card-unity">
-          <h3>Virtual Reality (VR)</h3>
-          <p>Dompel je gebruikers onder in een andere wereld. Ideaal voor veilige trainingen of indrukwekkende presentaties.</p>
+          <h3 data-i18n="unity.card3.title">Virtual Reality (VR)</h3>
+          <p data-i18n="unity.card3.text">Dompel je gebruikers onder in een andere wereld. Ideaal voor veilige trainingen of indrukwekkende presentaties.</p>
           <ul>
-            <li>Oculus / Meta Quest</li>
-            <li>Trainingssimulaties</li>
-            <li>360 graden video</li>
+            <li data-i18n="unity.card3.list1">Oculus / Meta Quest</li>
+            <li data-i18n="unity.card3.list2">Trainingssimulaties</li>
+            <li data-i18n="unity.card3.list3">360 graden video</li>
           </ul>
         </article>
       </div>
@@ -299,36 +305,36 @@
   <section id="faq" class="section section-light">
     <div class="container">
       <header class="section-header">
-        <h2>Veelgestelde Vragen</h2>
-        <p>Duidelijkheid vooraf, zodat we allebei weten waar we aan toe zijn.</p>
+        <h2 data-i18n="faq.title">Veelgestelde Vragen</h2>
+        <p data-i18n="faq.subtitle">Duidelijkheid vooraf, zodat we allebei weten waar we aan toe zijn.</p>
       </header>
       <div class="faq-list">
 
         <article itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h3 itemprop="name">Maak je ook de 3D-modellen en graphics voor mijn game?</h3>
+          <h3 itemprop="name" data-i18n="faq.q1.title">Maak je ook de 3D-modellen en graphics voor mijn game?</h3>
           <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">Mijn focus ligt op de <strong>technische ontwikkeling</strong> (de code en functionaliteit). Voor Unity-projecten verwacht ik dat jij de visuele assets (zoals 3D-modellen, sprites, UI en geluid) aanlevert. Heb je die niet? Dan kan ik je wel in contact brengen met getalenteerde designers.</p>
+            <p itemprop="text" data-i18n="faq.q1.text">Mijn focus ligt op de <strong>technische ontwikkeling</strong> (de code en functionaliteit). Voor Unity-projecten verwacht ik dat jij de visuele assets (zoals 3D-modellen, sprites, UI en geluid) aanlevert. Heb je die niet? Dan kan ik je wel in contact brengen met getalenteerde designers.</p>
           </div>
         </article>
 
         <article itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h3 itemprop="name">Regel jij de hosting van de website?</h3>
+          <h3 itemprop="name" data-i18n="faq.q2.title">Regel jij de hosting van de website?</h3>
           <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">Ik host zelf geen websites. Ik vind het belangrijk dat <strong>jij eigenaar blijft</strong> van je eigen data en domeinnaam. Ik adviseer je wel over de beste (en voordeligste) provider voor jouw project en ik regel de volledige technische installatie voor je.</p>
+            <p itemprop="text" data-i18n="faq.q2.text">Ik host zelf geen websites. Ik vind het belangrijk dat <strong>jij eigenaar blijft</strong> van je eigen data en domeinnaam. Ik adviseer je wel over de beste (en voordeligste) provider voor jouw project en ik regel de volledige technische installatie voor je.</p>
           </div>
         </article>
 
         <article itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h3 itemprop="name">Help je ook met Shopify, WordPress of bestaande code?</h3>
+          <h3 itemprop="name" data-i18n="faq.q3.title">Help je ook met Shopify, WordPress of bestaande code?</h3>
           <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">Zeker. Naast maatwerk kan ik je helpen met het professioneel opzetten van een <strong>Shopify</strong> winkel of <strong>WordPress</strong> site. Heb je al een project liggen waar fouten in zitten of dat updates nodig heeft? Ik duik graag in bestaande code om het weer werkend te krijgen.</p>
+            <p itemprop="text" data-i18n="faq.q3.text">Zeker. Naast maatwerk kan ik je helpen met het professioneel opzetten van een <strong>Shopify</strong> winkel of <strong>WordPress</strong> site. Heb je al een project liggen waar fouten in zitten of dat updates nodig heeft? Ik duik graag in bestaande code om het weer werkend te krijgen.</p>
           </div>
         </article>
 
         <article itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h3 itemprop="name">Wat kost een project ongeveer?</h3>
+          <h3 itemprop="name" data-i18n="faq.q4.title">Wat kost een project ongeveer?</h3>
           <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">Dat hangt af van de omvang. Een 'fix' aan een bestaande site of een simpele setup is voordeliger dan een complete Unity 3D-applicatie. Neem contact op voor een vrijblijvende prijsindicatie.</p>
+            <p itemprop="text" data-i18n="faq.q4.text">Dat hangt af van de omvang. Een 'fix' aan een bestaande site of een simpele setup is voordeliger dan een complete Unity 3D-applicatie. Neem contact op voor een vrijblijvende prijsindicatie.</p>
           </div>
         </article>
 
@@ -340,13 +346,13 @@
     <div class="container contact-grid">
       <div>
         <header class="section-header section-header-invert">
-          <h2>Start jouw project</h2>
-          <p>Klaar om je ideeën werkelijkheid te laten worden? Stuur me een berichtje.</p>
+          <h2 data-i18n="contact.title">Start jouw project</h2>
+          <p data-i18n="contact.subtitle">Klaar om je ideeën werkelijkheid te laten worden? Stuur me een berichtje.</p>
         </header>
         <ul class="contact-notes">
-          <li>Vrijblijvend advies</li>
-          <li>Direct antwoord van de ontwikkelaar</li>
-          <li>Geen technische kennis vereist</li>
+          <li data-i18n="contact.note1">Vrijblijvend advies</li>
+          <li data-i18n="contact.note2">Direct antwoord van de ontwikkelaar</li>
+          <li data-i18n="contact.note3">Geen technische kennis vereist</li>
         </ul>
       </div>
       <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
@@ -358,23 +364,23 @@
 
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-        <label for="name">Naam</label>
-        <input type="text" id="name" name="name" required placeholder="Je naam">
+        <label for="name" data-i18n="contact.label.name">Naam</label>
+        <input type="text" id="name" name="name" required placeholder="Je naam" data-i18n="contact.placeholder.name">
 
-        <label for="email">E-mailadres</label>
-        <input type="email" id="email" name="email" required placeholder="je@email.nl">
+        <label for="email" data-i18n="contact.label.email">E-mailadres</label>
+        <input type="email" id="email" name="email" required placeholder="je@email.nl" data-i18n="contact.placeholder.email">
 
-        <label for="type">Waar heb je interesse in?</label>
+        <label for="type" data-i18n="contact.label.interest">Waar heb je interesse in?</label>
         <select id="type" name="type">
-          <option value="landing">Nieuwe Website</option>
-          <option value="unity">Unity App / Game</option>
-          <option value="consulting">Advies / Anders</option>
+          <option value="landing" data-i18n="contact.option.landing">Nieuwe Website</option>
+          <option value="unity" data-i18n="contact.option.unity">Unity App / Game</option>
+          <option value="consulting" data-i18n="contact.option.consulting">Advies / Anders</option>
         </select>
 
-        <label for="message">Bericht</label>
-        <textarea id="message" name="message" rows="5" required placeholder="Vertel kort over je idee..."></textarea>
+        <label for="message" data-i18n="contact.label.message">Bericht</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Vertel kort over je idee..." data-i18n="contact.placeholder.message"></textarea>
 
-        <button type="submit" class="btn btn-primary btn-block">Verstuur bericht</button>
+        <button type="submit" class="btn btn-primary btn-block" data-i18n="contact.button">Verstuur bericht</button>
 
       </form>
     </div>
@@ -384,7 +390,7 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p>&copy; <span id="year"></span> FK Innovations | Webdesign & App Development in Nederland.</p>
+    <p>&copy; <span id="year"></span> <span data-i18n="footer.text">FK Innovations | Webdesign & App Development in Nederland.</span></p>
   </div>
 </footer>
 
